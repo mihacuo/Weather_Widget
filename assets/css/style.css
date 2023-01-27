@@ -1,0 +1,9 @@
+:root {
+  --dark-color:#2060a4;
+  --color1: #bbbbbb;
+  --color2: #56a6fe;
+}
+
+body {
+  background-color: blue;
+}

@@ -38,10 +38,12 @@ header {
   margin: 10px;
   border-radius: 5px;
   box-shadow: 5px 5px #b8b8b8;
+  width: 100%;
 }
 
 .one-day-forecast>p {
   margin-top: 10px;
+  
 }
 
 main {
@@ -49,7 +51,7 @@ main {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(5, 200px);
-  grid-template-rows: 50px 300px 300px;
+  grid-template-rows: 50px 300px auto;
   gap: 10px;
 }
 
@@ -95,8 +97,13 @@ button {
   .large-data-5day {
     font-size: 1rem;
   }
+
+  .one-day-forecast {
+  width: 45%;
+  display: inline;
+  }
   #five-day-forecast {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
   }
 
 }

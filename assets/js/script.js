@@ -107,19 +107,20 @@ $("#search-button").on("click", function (event) {
         //save to global var for analysis
         g5day = futureResponse;
         //call external function with current and future reponse
-        displayWeather(currentResponse, futureResponse);
+        displayWeather(currentResponse, futureResponse, searchCity);
       });
     });
   });
 });
 
-function displayWeather(current, future) {
+function displayWeather(current, future, searchCity) {
   console.log(current, future);
 
   // add current weather data first
   $("#weather-now").empty();
   var dateForecast = moment.unix(current.dt).format("D/M/YYYY");
   var city = $("<p>").text(
+    searchCity + ", place: "+
     current.name + "(" + current.sys.country + ")" + ". Date: " + dateForecast
   );
   city.addClass("large-data");

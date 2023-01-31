@@ -95,5 +95,8 @@ button {
   .large-data-5day {
     font-size: 1rem;
   }
+  #five-day-forecast {
+    flex-wrap: wrap;
+  }
 
 }

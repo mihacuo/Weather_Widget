@@ -51,7 +51,7 @@ $("#search-button").on("click", function (event) {
   // create new button
   var newButton = $("<button>");
   newButton.text(searchCity);
-  newButton.attr("name", hist[i]);
+  newButton.attr("name", searchCity);
   $("#previous-searches").append(newButton);
   newButton.on("click", function (event) {
     console.log(event.target.name);

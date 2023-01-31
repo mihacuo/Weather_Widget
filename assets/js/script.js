@@ -99,8 +99,7 @@ $("#search-button").on("click", function (event) {
         "&lon=" +
         lon +
         "&appid=" +
-        apikey +
-        "&cnt=5";
+        apikey;
       $.ajax({
         url: APIURL,
         method: "GET",
@@ -141,7 +140,14 @@ function displayWeather(current, future) {
 
   // add 5 days forecast now
   $("#five-day-forecast").empty();
-  for (var i = 0; i < 5; i++) {
+
+    // NEED To re-work, as currently extracts from the first 5 items of list. But should extract from the 5 days!!!
+    // currently manually extracted
+    // not best way
+
+  var neededItems = [5, 14, 22, 30, 38]
+  for (var j = 0; j < neededItems.length; j++) {
+    var i = neededItems[j];
     var oneDayArticle = $("<article>").addClass("one-day-forecast");
     var dateForecast = moment.unix(future.list[i].dt).format("D/M/YYYY");
     var dateStamp = $("<p>").text(dateForecast);
